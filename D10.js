@@ -380,9 +380,16 @@ const classTr = function ( ){
   ***
 
 */
-const halfTree = function (){
-  
-}
+const halfTree = function (height) {
+  let tree = "";
+
+  for (let i = 1; i <= height; i++) {
+    tree += "*".repeat(i) + "\n";
+  }
+
+  return tree;
+};
+console.log(halfTree(5));
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -394,15 +401,42 @@ const halfTree = function (){
   *****
 
 */
-const tree = function (){
+const tree = function (height) {
+  let tree = "";
 
-}
+  for (let i = 1; i <= height; i++) {
+    const spaces = " ".repeat(height - i);
+    const stars = " *".repeat(i* 2 - 1);
+    tree += spaces + stars + "\n";
+  }
+
+  return tree;
+};
+console.log(tree(3));
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-const isItPrime = function(){
+
+const isItPrime = function(n){
+  if(n > 1){ let testVeroFalso = true 
+    for ( let i = 2; i < n; i++){
+      if(n % i === 0){
+        testVeroFalso = false
+      }
+    }
+if(testVeroFalso === true){
+  console.log("E'un numero primo")
 
 }
+else  {
+  console.log("Non è un numero primo")
+}
+  }
+
+}
+isItPrime(2)
+
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
 const movies = [
